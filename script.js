@@ -22,6 +22,7 @@ button_input.forEach((button_class) => {
 equal.addEventListener("click", () => {
   equal_pressed = 1;
   let inp_val = input.value;
+  inp_val = inp_val.replace(/×/g, "*").replace(/÷/g, "/");
   try {
     let solution = eval(inp_val);
     if (Number.isInteger(solution)) {
